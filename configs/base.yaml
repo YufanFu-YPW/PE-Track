@@ -1,0 +1,67 @@
+#--------------------------------------------------
+# 基础信息
+datasets: "dancetrack"
+mod: "val"
+
+data_root: "/home1/fyf/MOT_Track/DataSets/DanceTrack/val"
+save_root: "results/ablation/Base/"
+
+tracker: "BaseTrack"
+tracker_name: "basetrack_NSAKF"
+
+val_type: "{gt_folder}/{seq}/gt/gt.txt"
+val_map_path: "/home1/fyf/MOT_Track/DataSets/DanceTrack/val_seqmap.txt"
+#--------------------------------------------------
+
+#--------------------------------------------------
+# detector and Reid
+# - - - - - - - - - - - cache - - - - - - - - - - - 
+use_cache: True
+cache_path: "cache/DanceTrack/val/dancetrack_val_0.1_0.7_yolox_X_Area.pkl"
+# - - - - - - - - - det and emb - - - - - - - - - -
+det_ckpt: " "
+det_exp_path: " "
+save_cache_path: " "
+
+det_input_h: 800
+det_input_w: 1440
+det_conf_thrd: 0.1
+det_nms_thrd: 0.7
+load_emb_model: True
+#--------------------------------------------------
+
+#--------------------------------------------------
+# Track
+# - - - - - - - - - - - IoU - - - - - - - - - - - - 
+iou_type: "iou"                                 # iou / hmiou / HOMIoU
+#- - - - - - - - - - - - base - - - - - - - - - - -
+model_name: "KF"
+use_NSA: True
+
+conf_weight_1: 1
+conf_weight_2: 1
+
+EMA_alpha: 0.8
+
+iou_thrd_1: 0.15
+iou_thrd_2: 0.35
+iou_thrd_3: 0.15
+
+det_high: 0.6
+det_low: 0.1
+new_tracklet_conf: 0.6
+
+max_lost: 30
+n_init: 3
+#--------------------------------------------------
+
+#--------------------------------------------------
+# 可视化
+visualise: False
+visual_root: " "
+#--------------------------------------------------
+
+#--------------------------------------------------
+# 备注
+Notes: " "
+#--------------------------------------------------

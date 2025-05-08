@@ -1,0 +1,97 @@
+#--------------------------------------------------
+# 基础信息
+datasets: "mot17"
+mod: "test"
+
+data_root: "Datasets/MOT17/test"
+save_root: "results/mot17/test"
+
+tracker: "PE-Track-Reid"                           # PE-Track / PE-Track-Reid
+tracker_name: "PEtrack-reid"
+
+val_type: "{gt_folder}/{seq}/gt/gt.txt"
+val_map_path: "Datasets/MOT17/test_seqmap.txt"
+#--------------------------------------------------
+
+#--------------------------------------------------
+# detector and Reid
+# - - - - - - - - - - - cache - - - - - - - - - - - 
+use_cache: True
+cache_path: "cache/MOT17/test/mot17_test_0.1_0.7_yolox_X_Area.pkl"
+# - - - - - - - - - det and emb - - - - - - - - - -
+det_ckpt: "external/weights/MOT17_yolox_x.tar"
+det_exp_path: "external/YOLOX/exps/mot/yolox_x_ch.py"
+save_cache_path: "cache/MOT17/test/mot17_test_0.1_0.7_yolox_X_Area.pkl"
+
+det_input_h: 800
+det_input_w: 1440
+det_conf_thrd: 0.1
+det_nms_thrd: 0.7
+load_emb_model: True
+#--------------------------------------------------
+
+#--------------------------------------------------
+# motion model
+model_name: "HSMP"
+weight_path: "models/weights/mot17_epoch300.pt"
+#- - - - - - - - - - - HSMP - - - - - - - - - - - - 
+sample_len: 5
+d_model: 256
+v_size: 8
+block_layers: 1
+d_state: 16
+d_conv: 4
+expand: 2
+fusion_expand: 2 
+mamba_layers: 2
+pre_mamba_layers: 2
+bi_mamba: False
+heads: 8
+norm_epsilon: 0.00001
+rms_norm: True
+dropout: 0.0
+#--------------------------------------------------
+
+#--------------------------------------------------
+# Track
+#- - - - - - - - - - - APCU - - - - - - - - - - - - 
+APCU: True
+beta: 0.5
+lamda: 0.7
+# - - - - - - - - - - - IoU - - - - - - - - - - - - 
+iou_type: "HOMIoU"                                 # iou / hmiou / HOMIoU
+# - - - - - - - - - potential ass - - - - - - - - - 
+P_Ass: True
+#- - - - - - - - - - - - base - - - - - - - - - - -
+use_NSA: True
+KF_measure_conf: False
+
+conf_weight_1: 1
+conf_weight_2: 1
+
+EMA_alpha: 0.9
+emb_weight_1: 4
+emb_weight_2: 4
+
+iou_thrd_1: 0.25
+iou_thrd_2: 0.5
+iou_thrd_3: 0.15
+
+det_high: 0.6
+det_low: 0.1
+new_tracklet_conf: 0.6                             
+
+max_lost: 30
+n_init: 3
+#--------------------------------------------------
+
+#--------------------------------------------------
+# Visualization
+visualise: False
+visual_root: ""
+#--------------------------------------------------
+
+#--------------------------------------------------
+# Remark
+Notes: " "
+#--------------------------------------------------
