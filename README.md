@@ -240,8 +240,7 @@ python main.py --config configs/MOT17/mot17_val.yaml --device 0
 
 ## :boom: VI. Demo
 
-![compare](assets/compare.gif)
-
+<img src="assets/compare.gif" width="800"/>
 
 ## :round_pushpin: Acknowledgement
 
