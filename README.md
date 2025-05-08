@@ -220,7 +220,7 @@ python main.py --config configs/SportsMOT/sports_val.yaml --device 0
 
 ### Track on MOT17
 
-Modify the `matching.py` file: comment out lines 148-149 and uncomment lines 150-151.
+Modify the `matching.py` file: comment out lines 148-149 and uncomment lines 151-152.
 
 Track on MOT17 test set:
 
