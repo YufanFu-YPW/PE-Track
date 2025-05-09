@@ -154,6 +154,8 @@ python data_process/MOT17/mot17_data_process.py
 
 `mot17_train_half_5.pkl` is sampled from the first half of the **MOT17** train set, while `mot17_val_half_5.pkl` is sampled from the latter half.
 
+We provide sampled data, you can download them from [Sample](https://drive.google.com/drive/folders/1wFbmijwmo3JinQRvtbTnjDFey3AknUaI?usp=drive_link).
+
 ### Train the motion predictor (HSMP)
 
 - train HSMP on DanceTrack
