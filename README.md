@@ -17,11 +17,11 @@
 
 ### Tracking results of PE-Track on test sets
 
-|  Dataset   | HOTA | IDF1 | AssA | MOTA | DetA |
-| :--------: | :--: | :--: | :--: | :--: | :--: |
-| DanceTrack | 62.7 | 63.9 | 47.7 | 92.6 | 82.6 |
-| SportsMOT  | 75.0 | 75.4 | 63.4 | 96.8 | 88.8 |
-|   MOT17    | 62.7 | 76.4 | 62.0 | 78.8 | 63.8 |
+|  Dataset   | HOTA | IDF1 | AssA | MOTA | DetA |      Results       |
+| :--------: | :--: | :--: | :--: | :--: | :--: | :----------------: |
+| DanceTrack | 62.7 | 63.9 | 47.7 | 92.6 | 82.6 | DanceTrack-results |
+| SportsMOT  | 75.0 | 75.4 | 63.4 | 96.8 | 88.8 | SportsMOT-results  |
+|   MOT17    | 62.7 | 76.4 | 62.0 | 78.8 | 63.8 |   MOT17-results    |
 
 ### Tracking results of PE-Track-Reid on test sets
 
