@@ -94,7 +94,7 @@ def sample_SportsMOT(dataset_root, deal_mod, sample_length, save_root):
             new_gt = np.vstack(list(seq_tid_gt.values()))
             num_frames = int(max(new_gt[:,0]))
 
-            space_conditions = get_space_conditions(new_gt, num_frames)  # 存储每一帧的空间交互信息，从第二帧开始存 {fid : condition}
+            space_conditions = get_space_conditions(new_gt, num_frames)  # {fid : condition}
 
             # Trajectory sampling
             seq_sample_num = 0

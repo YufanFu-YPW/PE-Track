@@ -1,27 +1,27 @@
 #--------------------------------------------------
 # Basic information
-datasets: "sports"
+datasets: "bee24"
 mod: "val"
 
-data_root: "Datasets/sportsmot_publish/dataset/val"
-save_root: "results/sportsmot/val"
+data_root: "Datasets/BEE24/test"
+save_root: "results/bee24/test"
 
 tracker: "PE-Track-Reid"                           # PE-Track / PE-Track-Reid
-tracker_name: "PETrack-reid"
+tracker_name: "PEtrack-reid"
 
 val_type: "{gt_folder}/{seq}/gt/gt.txt"
-val_map_path: "Datasets/sportsmot_publish/splits_txt/val.txt"
+val_map_path: "Datasets/BEE24/test_seqmap.txt"
 #--------------------------------------------------
 
 #--------------------------------------------------
 # detector and Reid
 # - - - - - - - - - - - cache - - - - - - - - - - - 
 use_cache: True
-cache_path: "cache/SportsMOT/val/sportsmot_val_0.1_0.7_yolox_X_Area.pkl"
+cache_path: "cache/BEE24/test/bee24_test_0.1_0.7_yolox_X_Area.pkl"
 # - - - - - - - - - det and emb - - - - - - - - - -
-det_ckpt: "external/weights/SportsMOT_yolox_x.tar"
-det_exp_path: "external/YOLOX/exps/sportsmot/yolox_x_sportsmot.py"
-save_cache_path: "cache/SportsMOT/val/sportsmot_val_0.1_0.7_yolox_X_Area.pkl"
+det_ckpt: "external/weights/bee24.pth.tar"
+det_exp_path: "external/YOLOX/exps/bee24/yolox_x_bee24_train.py"
+save_cache_path: "cache/BEE24/test/bee24_test_0.1_0.7_yolox_X_Area.pkl"
 
 det_input_h: 800
 det_input_w: 1440
@@ -33,7 +33,7 @@ load_emb_model: True
 #--------------------------------------------------
 # motion model
 model_name: "HSMP"
-weight_path: "models/weights/sports_epoch290.pt"
+weight_path: "models/weights/bee24_epoch230.pt"
 #- - - - - - - - - - - HSMP - - - - - - - - - - - - 
 sample_len: 5
 d_model: 256
@@ -69,17 +69,17 @@ KF_measure_conf: True
 conf_weight_1: 1
 conf_weight_2: 1
 
-EMA_alpha: 0.9
+EMA_alpha: 0.8
 emb_weight_1: 4
 emb_weight_2: 4
 
 iou_thrd_1: 0.15
-iou_thrd_2: 0.35
+iou_thrd_2: 0.45
 iou_thrd_3: 0.15
 
 det_high: 0.6
-det_low: 0.1
-new_tracklet_conf: 0.6                             
+det_low: 0.4
+new_tracklet_conf: 0.6
 
 max_lost: 30
 n_init: 3
@@ -88,7 +88,7 @@ n_init: 3
 #--------------------------------------------------
 # Visualization
 visualise: False
-visual_root: "vis/img/SportsMOT/val/PE-Track-Reid"
+visual_root: ""
 #--------------------------------------------------
 
 #--------------------------------------------------

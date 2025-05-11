@@ -182,6 +182,8 @@ class EmbeddingComputer:
             path = "external/weights/dancetrack_sbs_S50.pth"
         elif self.dataset == "sports":
             path = "external/weights/sports_sbs_S50.pth"
+        elif self.dataset == "bee24":
+            path = "external/weights/bee24_AGW.pth"
         else:
             raise RuntimeError("Need the path for a new ReID model.")
 

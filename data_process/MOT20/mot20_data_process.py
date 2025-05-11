@@ -1,8 +1,9 @@
 import os
 import numpy as np
 import pandas as pd
+# import h5py
 import pickle
-from split_label import MOT17_train_seqs, MOT17_train_half_len
+from mot20_split_label import MOT20_train_seqs
 
 
 
@@ -52,16 +53,16 @@ def _get_condition(f1_gt, f2_gt):
     return np.vstack(space_condition)
 
 
-def sample_MOT17(dataset_root, deal_mod, sample_length, save_root):
+def sample_MOT20(dataset_root, deal_mod, sample_length, save_root):
     for mod in deal_mod:
         print(f'Start processing {mod} datasets')
         mkdirs(save_root)
-        save_path = os.path.join(save_root,'mot17_' + mod + f'_{sample_length}.pkl')
+        save_path = os.path.join(save_root,'mot20_' + mod + f'_{sample_length}.pkl')
         # print(save_path)
         # break
         seq_root = os.path.join(dataset_root, 'train')
         # seqs = [s for s in os.listdir(seq_root)]
-        seqs = MOT17_train_seqs
+        seqs = MOT20_train_seqs
 
         sample_dataset = []
         for seq in seqs:
@@ -84,7 +85,7 @@ def sample_MOT17(dataset_root, deal_mod, sample_length, save_root):
             # fid, tid, x, y, w, h, vis --> fid, tid, cx, cy, w, h, vis
             gt[:,2] += gt[:,4]/2
             gt[:,3] += gt[:,5]/2
-            # Normalization
+            # 归一化
             gt[:,2] /= seq_width
             gt[:,4] /= seq_width
             gt[:,3] /= seq_height
@@ -142,8 +143,10 @@ def sample_MOT17(dataset_root, deal_mod, sample_length, save_root):
 
 if __name__ == "__main__":
     sample_length = 5
-    dataset_root = 'Datasets/MOT17'
-    deal_mod = ['train', 'train_half', 'val_half']
-    save_root = 'sample_datasets/MOT17'
-    sample_MOT17(dataset_root, deal_mod, sample_length, save_root)
+    dataset_root = 'DataSets/MOT20'
+    deal_mod = ['train']
+    save_root = 'sample_datasets/MOT20'
+    sample_MOT20(dataset_root, deal_mod, sample_length, save_root)
+
+# len=5 total=360565
 

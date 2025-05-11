@@ -2,10 +2,6 @@ import os
 import numpy as np
 import pandas as pd
 import pickle
-from split_label import MOT17_train_seqs, MOT17_train_half_len
-
-
-
 
 def mkdirs(dir_path):
     if not os.path.exists(dir_path):
@@ -52,16 +48,15 @@ def _get_condition(f1_gt, f2_gt):
     return np.vstack(space_condition)
 
 
-def sample_MOT17(dataset_root, deal_mod, sample_length, save_root):
+def sample_BEE24(dataset_root, deal_mod, sample_length, save_root):
     for mod in deal_mod:
         print(f'Start processing {mod} datasets')
         mkdirs(save_root)
-        save_path = os.path.join(save_root,'mot17_' + mod + f'_{sample_length}.pkl')
+        save_path = os.path.join(save_root,'bee24_' + mod + f'_{sample_length}.pkl')
         # print(save_path)
         # break
-        seq_root = os.path.join(dataset_root, 'train')
-        # seqs = [s for s in os.listdir(seq_root)]
-        seqs = MOT17_train_seqs
+        seq_root = os.path.join(dataset_root, mod)
+        seqs = [s for s in os.listdir(seq_root)]
 
         sample_dataset = []
         for seq in seqs:
@@ -70,21 +65,17 @@ def sample_MOT17(dataset_root, deal_mod, sample_length, save_root):
             seq_width = int(seq_info[seq_info.find('imWidth=') + 8:seq_info.find('\nimHeight')])
             seq_height = int(seq_info[seq_info.find('imHeight=') + 9:seq_info.find('\nimExt')])
 
-            if mod == 'train':
-                gt_txt = os.path.join(seq_root, seq, 'gt', 'gt.txt')
-            else:
-                gt_txt = os.path.join(seq_root, seq, 'gt', f'gt_{mod}.txt')
-
+            gt_txt = os.path.join(seq_root, seq, 'gt', 'gt.txt')
             gt = np.loadtxt(gt_txt, dtype=np.float64, delimiter=',')
             # fid, tid, x, y, w, h, mark, cls, vis
             gt = gt[gt[:,6] != 0]  # mark != 0
-            # gt = gt[gt[:,7] == 1]  # cls == 1
+            gt = gt[gt[:,7] == 1]  # cls == 1
             # fid, tid, x, y, w, h, vis
             gt = gt[:, [0,1,2,3,4,5,8]]
             # fid, tid, x, y, w, h, vis --> fid, tid, cx, cy, w, h, vis
             gt[:,2] += gt[:,4]/2
             gt[:,3] += gt[:,5]/2
-            # Normalization
+            # 归一化
             gt[:,2] /= seq_width
             gt[:,4] /= seq_width
             gt[:,3] /= seq_height
@@ -131,7 +122,7 @@ def sample_MOT17(dataset_root, deal_mod, sample_length, save_root):
                         sample_dataset.append(sample_item)
             print(f'seq:{seq}  Total number of samples：{seq_sample_num}')
 
-        print(f'DanceTrack {mod} datasets :  number of samples = {len(sample_dataset)}')
+        print(f'BEE24 {mod} datasets :  number of samples = {len(sample_dataset)}')
         with open(save_path, 'wb') as f:
             pickle.dump(sample_dataset, f)
         print(f'save to : {save_path}')
@@ -142,8 +133,7 @@ def sample_MOT17(dataset_root, deal_mod, sample_length, save_root):
 
 if __name__ == "__main__":
     sample_length = 5
-    dataset_root = 'Datasets/MOT17'
-    deal_mod = ['train', 'train_half', 'val_half']
-    save_root = 'sample_datasets/MOT17'
-    sample_MOT17(dataset_root, deal_mod, sample_length, save_root)
-
+    dataset_root = 'DataSets/BEE24'
+    deal_mod = ['train', 'test']
+    save_root = 'sample_datasets/BEE24'
+    sample_BEE24(dataset_root, deal_mod, sample_length, save_root)
