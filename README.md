@@ -22,6 +22,8 @@
 | DanceTrack | 62.7 | 63.9 | 47.7 | 92.6 | 82.6 | [DanceTrack-results](https://drive.google.com/drive/folders/1OyLgymdcm6aGH-I5hH5m_clDbOMJlWhT) |
 | SportsMOT  | 75.0 | 75.4 | 63.4 | 96.8 | 88.8 | [SportsMOT-results](https://drive.google.com/drive/folders/1OyLgymdcm6aGH-I5hH5m_clDbOMJlWhT) |
 |   MOT17    | 62.7 | 76.4 | 62.0 | 78.8 | 63.8 | [MOT17-results](https://drive.google.com/drive/folders/1OyLgymdcm6aGH-I5hH5m_clDbOMJlWhT) |
+|   MOT20    | 60.5 | 74.0 | 60.2 | 74.2 | 61.0 |                                                              |
+|   BEE24    | 49.0 | 63.2 | 43.4 | 68.5 | 55.5 |                                                              |
 
 ### Tracking results of PE-Track-Reid on test sets
 
@@ -30,6 +32,8 @@
 | DanceTrack | 65.8 | 68.0 | 52.6 | 92.7 | 82.4 | [DanceTrack-results](https://drive.google.com/drive/folders/1OyLgymdcm6aGH-I5hH5m_clDbOMJlWhT) |
 | SportsMOT  | 76.8 | 77.3 | 66.2 | 96.8 | 89.1 | [SportsMOT-results](https://drive.google.com/drive/folders/1OyLgymdcm6aGH-I5hH5m_clDbOMJlWhT) |
 |   MOT17    | 63.7 | 78.4 | 63.8 | 78.9 | 63.8 | [MOT17-results](https://drive.google.com/drive/folders/1OyLgymdcm6aGH-I5hH5m_clDbOMJlWhT) |
+|   MOT20    | 63.1 | 77.9 | 65.0 | 74.3 | 61.3 |                                                              |
+|   BEE24    | 49.4 | 64.0 | 44.1 | 68.5 | 55.5 |                                                              |
 
 ### Tracking results of PE-Track on validation sets
 
@@ -110,6 +114,15 @@ Our data structure is as follows:
 |	|-- train
 |	|-- test_seqmap.txt
 |	|-- train_seqmap.txt
+|
+|-- MOT20
+|	|-- test
+|	|-- train
+|
+|-- BEE24
+|	|-- test
+|	|-- train
+|	|-- test_seqmap.txt
 ```
 
 1. Download these datasets from [DanceTrack](https://github.com/DanceTrack/DanceTrack?tab=readme-ov-file), [SportsMOT](https://codalab.lisn.upsaclay.fr/competitions/12424#participate) and [MOT17](https://motchallenge.net/data/MOT17/) respectively. Then put them under  `<Root>/Datasets` according to the above structure.
