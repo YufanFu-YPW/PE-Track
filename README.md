@@ -242,8 +242,6 @@ python main.py --config configs/MOT17/mot17_val.yaml --device 0
 
 ## :boom: VI. Demo
 
-<img src="assets/compare.gif" width="800"/>
-
 ## :round_pushpin: Acknowledgement
 
 Some of our code is borrowed from [DiffMOT](https://github.com/Kroery/DiffMOT) and [StrongSORT](https://github.com/dyhBUPT/StrongSORT). Thanks for their wonderful works.
