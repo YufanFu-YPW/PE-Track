@@ -290,9 +290,10 @@ python main.py --config configs/BEE24/bee24_test.yaml --device 0
 
 <center>
 <video width="800">
-<source src="assets/compare_demo.mp4" type="video/mp4">
+<source src=".assets/compare_demo.mp4" type="video/mp4">
 </video>
 </center>
+
 
 ## :round_pushpin: Acknowledgement
 
