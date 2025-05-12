@@ -288,7 +288,7 @@ python main.py --config configs/BEE24/bee24_test.yaml --device 0
 
 ## :boom: VI. Demo
 
-https://github.com/YufanFu-YPW/PE-Track/blob/main/assets/compare_demo.mp4
+The video demonstration of PE-Track and more tracking results videos can be viewed on the PE-Track homepage.
 
 ## :round_pushpin: Acknowledgement
 
