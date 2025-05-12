@@ -288,12 +288,7 @@ python main.py --config configs/BEE24/bee24_test.yaml --device 0
 
 ## :boom: VI. Demo
 
-<center>
-<video width="800">
-<source src=".assets/compare_demo.mp4" type="video/mp4">
-</video>
-</center>
-
+https://github.com/YufanFu-YPW/PE-Track/blob/main/assets/compare_demo.mp4
 
 ## :round_pushpin: Acknowledgement
 
