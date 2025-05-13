@@ -290,6 +290,8 @@ python main.py --config configs/BEE24/bee24_test.yaml --device 0
 
 The video demonstration of PE-Track and more tracking results videos can be viewed on the [PE-Track homepage](https://anonymous.4open.science/w/petrack/).
 
+(Due to website problems, this jump link may have problems. If the jump link cannot open the homepage, please refresh it or visit it through the URL: `https://anonymous.4open.science/w/petrack/`)
+
 ## :round_pushpin: Acknowledgement
 
 Some of our code is borrowed from [DiffMOT](https://github.com/Kroery/DiffMOT) and [StrongSORT](https://github.com/dyhBUPT/StrongSORT). Thanks for their wonderful works.
