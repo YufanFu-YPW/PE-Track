@@ -32,7 +32,7 @@
 | SportsMOT  | 76.8 | 77.3 | 66.2 | 96.8 | 89.1 | [SportsMOT-results](https://drive.google.com/drive/folders/1OyLgymdcm6aGH-I5hH5m_clDbOMJlWhT) |
 |   MOT17    | 63.7 | 78.4 | 63.8 | 78.9 | 63.8 | [MOT17-results](https://drive.google.com/drive/folders/1OyLgymdcm6aGH-I5hH5m_clDbOMJlWhT) |
 |   MOT20    | 63.1 | 77.9 | 65.0 | 74.3 | 61.3 | [MOT20-results](https://drive.google.com/drive/folders/1OyLgymdcm6aGH-I5hH5m_clDbOMJlWhT) |
-|   BEE24    | 49.4 | 64.0 | 44.1 | 68.5 | 55.5 | [BEE24-results](https://drive.google.com/drive/folders/1OyLgymdcm6aGH-I5hH5m_clDbOMJlWhT) |
+|   BEE24    | 49.5 | 64.3 | 44.3 | 68.5 | 55.5 | [BEE24-results](https://drive.google.com/drive/folders/1OyLgymdcm6aGH-I5hH5m_clDbOMJlWhT) |
 
 ### Tracking results of PE-Track on validation sets
 
