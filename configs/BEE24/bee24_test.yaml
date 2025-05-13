@@ -78,7 +78,7 @@ iou_thrd_2: 0.45
 iou_thrd_3: 0.15
 
 det_high: 0.6
-det_low: 0.4
+det_low: 0.1
 new_tracklet_conf: 0.6
 
 max_lost: 30
