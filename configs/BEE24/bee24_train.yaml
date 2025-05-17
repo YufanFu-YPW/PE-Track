@@ -1,0 +1,41 @@
+dataset: 'bee24'
+data_path: "sample_datasets/BEE24/bee24_train_5.pkl"
+save_dir: "experiments/BEE24/5/exp01"
+sample_len: 5
+
+# optimizer
+optimizer: "Adam"  # or SGD
+lr: 0.0001
+gamma: 0.99
+use_scheduler: True
+# 
+d_model: 256
+v_size: 8
+block_layers: 1
+d_state: 16
+d_conv: 4
+expand: 2
+fusion_expand: 2 
+mamba_layers: 2
+pre_mamba_layers: 2
+bi_mamba: False
+heads: 8
+norm_epsilon: 0.00001
+rms_norm: True
+dropout: 0.0
+
+# train
+drop_last: True
+num_workers: 0
+epochs: 300
+batch_size: 2048
+seed: 318
+save_every: 10
+
+
+
+# eval
+val_data_path: "sample_datasets/BEE24/bee24_test_5.pkl"
+
+
+Notes: "L1 loss"
