@@ -2,7 +2,7 @@
 
 ## :mag_right: PE-Track: Enhancement of Holistic Motion Prediction for Multiple Object Tracking
 
-**PE-Track is a holistically motion prediction enhanced tracker.**
+**PE-Track is a holistical motion prediction-enhanced tracker.**
 
 ### Framework
 
