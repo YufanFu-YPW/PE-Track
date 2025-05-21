@@ -1,0 +1,16 @@
+Cython
+cython_bbox
+easydict
+einops
+h5py
+lapx
+loguru
+matplotlib
+numpy
+opencv-python
+pandas
+pillow
+pycocotools
+PyYAML
+scipy
+tqdm
