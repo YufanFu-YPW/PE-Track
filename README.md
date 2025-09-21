@@ -288,9 +288,9 @@ python main.py --config configs/BEE24/bee24_test.yaml --device 0
 
 ## :boom: VI. Demo
 
-The video demonstration of PE-Track and more tracking results videos can be viewed on the [PE-Track homepage](https://anonymous.4open.science/w/petrack/).
+The video demonstration of PE-Track and more tracking results videos can be viewed on the [PE-Track homepage](https://yufanfu-ypw.github.io/petrack/).
 
-(Due to website problems, this jump link may have problems. If the jump link cannot open the homepage, please refresh it or visit it through the URL: `https://anonymous.4open.science/w/petrack/`)
+(Due to website problems, this jump link may have problems. If the jump link cannot open the homepage, please refresh it or visit it through the URL: `https://yufanfu-ypw.github.io/petrack/`)
 
 ## :round_pushpin: Acknowledgement
 
